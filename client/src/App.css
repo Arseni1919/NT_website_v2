@@ -23,11 +23,10 @@ header {
 footer {
     background-color: lightslategrey;
     /*position: fixed;*/
-    position:absolute;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    margin: auto;
+    padding: 1px;
     align-items: center;
     justify-content: center;
     color: white;
@@ -45,6 +44,7 @@ footer {
 .layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 30px;
     /*gap: 10px;*/
 }
 
