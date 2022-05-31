@@ -1,14 +1,6 @@
 import {useState, useEffect} from "react";
+import StockButton from "./StockButton";
 
-
-async function fetchStocks(){
-    const res = await fetch('http://localhost:5000/get_stocks_names')
-        .then((res) => {
-            return res.json();
-        })
-        .catch((e) => console.log(e));
-    return res;
-}
 
 function StocksList() {
     const [data, setData] = useState(null);
@@ -23,26 +15,14 @@ function StocksList() {
               console.log(err.message);
           });
 
-     }, []);
+     }, [data]);
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>
-        <ul>
         {data &&
           data.map((title) => (
-            <li key={title}>
-              <h3>{title}</h3>
-            </li>
+            <StockButton title={title} />
           ))}
-        </ul>
-        <ul>
-        {data &&
-          data.map((title) => (
-            <li key={title}>
-              <h3>{title}</h3>
-            </li>
-          ))}
-        </ul>
 
     </div>
     );
