@@ -10,6 +10,6 @@
 - [blog | Modern API data-fetching methods in React](https://blog.logrocket.com/modern-api-data-fetching-methods-react/#:~:text=The%20Fetch%20API%20through%20the,to%20an%20endpoint%2C%20and%20more.)
 - [blog | How to Fetch Data in React: Cheat Sheet + Examples](https://www.freecodecamp.org/news/fetch-data-react/)
 - [npm | react-fetch-hook](https://www.npmjs.com/package/react-fetch-hook)
-- []()
+- [medium | Create a stock chart in react js](https://medium.com/how-to-react/create-a-stock-chart-in-react-js-677be5f2f356)
 - []()
 - []()
