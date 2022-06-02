@@ -15,7 +15,7 @@ function StocksList() {
               console.log(err.message);
           });
 
-     }, [data]);
+     }, []);
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>
