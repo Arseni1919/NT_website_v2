@@ -14,7 +14,7 @@ function MainGraph() {
     }, [parentRef]);
 
     window.addEventListener('resize', (event) => {
-        console.log('inside resize!!!')
+        // console.log('inside resize!!!')
         setHeight(parentRef.current.offsetHeight);
         setWidth(parentRef.current.offsetWidth);
     });
