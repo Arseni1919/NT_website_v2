@@ -49,7 +49,7 @@ stocks_names_list = [
     'VOO',
 ]
 
-app = Flask(__name__, static_url_path='', static_folder='client/build')
+app = Flask(__name__, static_url_path='/', static_folder='../client/build')
 app.secret_key = os.environ.get('SECRET_KEY')
 if mode == 'build':
     print(mode)
@@ -58,7 +58,7 @@ if mode == 'build':
 
 @app.route('/')
 def index_func():
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory('../client/build', 'index.html')
     # return 'hello'
 
 
