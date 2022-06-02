@@ -49,7 +49,7 @@ stocks_names_list = [
     'VOO',
 ]
 
-app = Flask(__name__, static_url_path='', static_folder='../client/build')
+app = Flask(__name__, static_url_path='', static_folder='client/build')
 app.secret_key = os.environ.get('SECRET_KEY')
 if mode == 'build':
     print(mode)
