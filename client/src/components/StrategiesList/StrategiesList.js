@@ -9,6 +9,7 @@ function StrategiesList() {
     return (
     <div className="StrategiesList container">
       <h3>StrategiesList</h3>
+        {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
             <StrategyItem title={title}/>

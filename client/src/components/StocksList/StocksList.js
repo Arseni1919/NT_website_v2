@@ -9,6 +9,7 @@ function StocksList() {
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>
+        {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
             <StockButton title={title} />
