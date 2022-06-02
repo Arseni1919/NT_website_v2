@@ -31,7 +31,7 @@ export default function SignalGraph({name}) {
     var data = [trace1];
 
     const layout = {
-        width: width,
+        width: width * 0.9,
         height: 130,
         // title:name,
         showlegend: true,
@@ -49,6 +49,7 @@ export default function SignalGraph({name}) {
         <Plot
         data={data}
         layout={layout}
+        useResizeHandler={true}
         // config={config}
       />
     </div>
