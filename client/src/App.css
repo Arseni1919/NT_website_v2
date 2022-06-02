@@ -5,7 +5,8 @@
 }
 
 .App {
-  text-align: center;
+    text-align: center;
+    min-width: 1300px;
 }
 
 /*************** Header *************/
@@ -169,4 +170,8 @@ a {
 
 .SignalItem .signal_label {
     padding-left: 7px;
+}
+
+.MainGraph {
+    min-height: 400px;
 }

@@ -5,7 +5,7 @@ import StocksList from "./components/StocksList/StocksList";
 import StrategiesList from "./components/StrategiesList/StrategiesList";
 import SignalsList from "./components/SignalsList/SignalsList";
 import MainGraph from "./components/StocksGraphs/MainGraph";
-import SignalsGraphs from "./components/SignalsGraphs";
+import SignalsGraphs from "./components/SignalsGraphs/SignalsGraphs";
 
 function App() {
   return (

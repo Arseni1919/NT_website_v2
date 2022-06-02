@@ -9,7 +9,7 @@ function SignalsList() {
     <div className="SignalsList container">
       <h3>SignalsList</h3>
         {isLoading ? (<div>Loading...</div>) : (<></>)}
-        {data && data.map((item) => (<SignalItem title={item} />))}
+        {data && data.map((title) => (<SignalItem title={title} key={title}/>))}
     </div>
     );
 }

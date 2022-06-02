@@ -12,7 +12,7 @@ function StrategiesList() {
         {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
-            <StrategyItem title={title}/>
+            <StrategyItem title={title} key={title}/>
           ))}
     </div>
     );

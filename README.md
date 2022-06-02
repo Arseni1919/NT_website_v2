@@ -11,5 +11,5 @@
 - [blog | How to Fetch Data in React: Cheat Sheet + Examples](https://www.freecodecamp.org/news/fetch-data-react/)
 - [npm | react-fetch-hook](https://www.npmjs.com/package/react-fetch-hook)
 - [medium | Create a stock chart in react js](https://medium.com/how-to-react/create-a-stock-chart-in-react-js-677be5f2f356)
-- []()
-- []()
+- [Plotly | DOCS: data, layout](https://plotly.com/javascript/reference/index/)
+- [Plotly | DOCS: config](https://plotly.com/javascript/configuration-options/)

@@ -12,7 +12,7 @@ function StocksList() {
         {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
-            <StockButton title={title} />
+            <StockButton title={title} key={title}/>
           ))}
 
     </div>
