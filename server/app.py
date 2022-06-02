@@ -1,7 +1,11 @@
 import time
-
-from flask import Flask, jsonify
-from flask_cors import CORS  # comment this on deployment
+from dotenv import load_dotenv
+import os
+from flask import Flask, jsonify, send_from_directory
+load_dotenv()
+mode = os.environ.get('MODE')
+if mode == 'build':
+    from flask_cors import CORS  # comment this on deployment
 
 signals_names_list = [
     'signal 1',
@@ -9,12 +13,14 @@ signals_names_list = [
     'signal 3',
     'signal 4',
 ]
+
 strategies_names_list = [
     'strategy 1',
     'strategy 2',
     'strategy 3',
     'strategy 4',
 ]
+
 stocks_names_list = [
     'AAPL',
     'AMZN',
@@ -42,8 +48,10 @@ stocks_names_list = [
     'VOO',
 ]
 
-app = Flask(__name__)
-CORS(app)  # comment this on deployment
+app = Flask(__name__, static_folder='client/build')
+app.secret_key = os.environ.get('SECRET_KEY')
+if mode == 'build':
+    CORS(app)  # comment this on deployment
 
 
 @app.route('/get_signals_names')
@@ -63,7 +71,7 @@ def get_stocks_names_func():
 
 @app.route('/')
 def index():
-    return 'Hello'
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 if __name__ == '__main__':
