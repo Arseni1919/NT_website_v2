@@ -76,7 +76,5 @@ def get_stocks_names_func():
     return jsonify(stocks_names_list)
 
 
-
-
 if __name__ == '__main__':
     app.run()
