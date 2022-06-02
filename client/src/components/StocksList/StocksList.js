@@ -1,21 +1,11 @@
-import {useState, useEffect} from "react";
 import StockButton from "./StockButton";
+import useFetch from "react-fetch-hook";
 
 
 function StocksList() {
-    const [data, setData] = useState(null);
-     useEffect(() => {
-      fetch('http://localhost:5000/get_stocks_names')
-          .then((res) => res.json())
-          // .then((response) => console.log(response))
-          .then((actualData) => {
-            setData(actualData);
-          })
-          .catch((err) => {
-              console.log(err.message);
-          });
+    // const [data, setData] = useState(null);
+    const { isLoading, data } = useFetch("http://localhost:5000/get_stocks_names");
 
-     }, []);
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>

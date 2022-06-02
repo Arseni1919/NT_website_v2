@@ -13,10 +13,10 @@ function App() {
       <Header />
         <div className="layout">
             <StrategiesList />
-            <SignalsList />
             <MainGraph />
-            <SignalsGraphs />
             <StocksList />
+            <SignalsList />
+            <SignalsGraphs />
         </div>
       <Footer />
     </div>

@@ -1,20 +1,10 @@
 import {useEffect, useState} from "react";
 import StrategyItem from "./StrategyItem";
+import useFetch from "react-fetch-hook";
 
 function StrategiesList() {
-    const [data, setData] = useState(null);
-     useEffect(() => {
-      fetch('http://localhost:5000/get_strategies_names')
-          .then((res) => res.json())
-          // .then((response) => console.log(response))
-          .then((actualData) => {
-            setData(actualData);
-          })
-          .catch((err) => {
-              console.log(err.message);
-          });
-
-     }, []);
+    // const [data, setData] = useState(null);
+    const { isLoading, data } = useFetch("http://localhost:5000/get_strategies_names");
 
     return (
     <div className="StrategiesList container">

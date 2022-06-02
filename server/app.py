@@ -1,12 +1,17 @@
 from flask import Flask, jsonify
 from flask_cors import CORS  # comment this on deployment
 
-
+signals_names_list = [
+    'signal 1',
+    'signal 2',
+    'signal 3',
+    'signal 4',
+]
 strategies_names_list = [
-    'strat mean',
-    'strat 2',
-    'strat 3',
-    'strat 4',
+    'strategy 1',
+    'strategy 2',
+    'strategy 3',
+    'strategy 4',
 ]
 stocks_names_list = [
     'AAPL',
@@ -37,6 +42,11 @@ stocks_names_list = [
 
 app = Flask(__name__)
 CORS(app)  # comment this on deployment
+
+
+@app.route('/get_signals_names')
+def get_signals_names_func():
+    return jsonify(signals_names_list)
 
 
 @app.route('/get_strategies_names')

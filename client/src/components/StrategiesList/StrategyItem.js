@@ -1,4 +1,5 @@
-import DecisionTab from "../StocksList/DecisionTab";
+import DecisionTab from "./DecisionTab";
+
 
 export default function StrategyItem({title}) {
     const toBuy = Math.random() > 0.5
