@@ -1,11 +1,12 @@
 import time
+from flask_cors import CORS  # comment this on deployment
 from dotenv import load_dotenv
 import os
 from flask import Flask, jsonify, send_from_directory
 load_dotenv()
+
 mode = os.environ.get('MODE')
-if mode == 'build':
-    from flask_cors import CORS  # comment this on deployment
+
 
 signals_names_list = [
     'signal 1',
