@@ -5,7 +5,7 @@ import useFetch from "react-fetch-hook";
 function StocksList() {
     // const [data, setData] = useState(null);
     const { isLoading, data } = useFetch("http://localhost:5000/get_stocks_names");
-
+    // console.log(data)
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>
