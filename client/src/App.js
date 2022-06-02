@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <Header />
         <div className="layout">
-            <h1>Hi</h1>
-            {/*<StrategiesList />*/}
-            {/*<MainGraph />*/}
-            {/*<StocksList />*/}
-            {/*<SignalsList />*/}
-            {/*<SignalsGraphs />*/}
+            {/*<h1>Hi</h1>*/}
+            <StrategiesList />
+            <MainGraph />
+            <StocksList />
+            <SignalsList />
+            <SignalsGraphs />
         </div>
       <Footer />
     </div>
