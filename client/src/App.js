@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import StocksList from "./components/StocksList/StocksList";
 import StrategiesList from "./components/StrategiesList/StrategiesList";
 import SignalsList from "./components/SignalsList/SignalsList";
-import MainGraph from "./components/MainGraph";
+import MainGraph from "./components/StocksGraphs/MainGraph";
 import SignalsGraphs from "./components/SignalsGraphs";
 
 function App() {

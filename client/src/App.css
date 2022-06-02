@@ -116,6 +116,7 @@ a {
 }
 
 .PercentageDiff  {
+    font-weight: bold;
     grid-column: 2;
     padding-left: 10px;
     display: grid;
