@@ -4,7 +4,11 @@
 ## Upload Process
 
 1. npm run build
-2. 
+2. git add .  
+3. git commit -m 'upload'   
+4. git push heroku main 
+5. heroku logs --tail 
+
 
 ## Credits
 
