@@ -4,20 +4,22 @@ import Plot from "react-plotly.js";
 export default function SignalGraph({name}) {
 
     const parentRef = useRef(null);
-    const [height, setHeight] = useState(0);
+    // const [height, setHeight] = useState(0);
     const [width, setWidth] = useState(0);
 
     useEffect ( () => {
         if(parentRef.current){
-            setHeight(parentRef.current.offsetHeight);
+            // setHeight(parentRef.current.offsetHeight);
             setWidth(parentRef.current.offsetWidth);
         }
     }, [parentRef]);
 
     window.addEventListener('resize', (event) => {
         // console.log('inside resize!!!')
-        setHeight(parentRef.current.offsetHeight);
-        setWidth(parentRef.current.offsetWidth);
+        if (parentRef) {
+            // setHeight(parentRef.current.offsetHeight);
+            setWidth(parentRef.current.offsetWidth);
+        }
     });
 
     var trace1 = {
