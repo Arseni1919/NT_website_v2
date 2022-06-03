@@ -3,9 +3,10 @@ import StrategyItem from "./StrategyItem";
 import useFetch from "react-fetch-hook";
 import { path } from "../../load_env_variables";
 
-function StrategiesList() {
+function StrategiesList({chosenStrategy, setChosenStrategy}) {
     // const [data, setData] = useState(null);
     const { isLoading, data } = useFetch(`${path}/get_strategies_names`);
+
 
     return (
     <div className="StrategiesList container">
@@ -13,7 +14,11 @@ function StrategiesList() {
         {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
-            <StrategyItem title={title} key={title}/>
+            <StrategyItem title={title}
+                          key={title}
+                          chosenStrategy={chosenStrategy}
+                          setChosenStrategy={setChosenStrategy}
+            />
           ))}
     </div>
     );

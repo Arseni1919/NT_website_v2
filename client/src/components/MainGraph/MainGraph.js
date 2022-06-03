@@ -1,7 +1,7 @@
 import Plot from 'react-plotly.js';
 import {useEffect, useRef, useState} from 'react';
 
-function MainGraph() {
+function MainGraph({mainGraphStock, chosenStrategy}) {
     const parentRef   = useRef(null);
     const [height, setHeight] = useState(0);
     const [width, setWidth] = useState(0);
@@ -94,7 +94,7 @@ var layout = {
 
     return (
     <div ref={parentRef} className="MainGraph container" id={'myDiv'}>
-        <h3>Main: Sizes of this window ({width}, {height})</h3>
+        <h3>Main: {mainGraphStock}{chosenStrategy ? `, Strategy: ${chosenStrategy}`: ``}</h3>
 
         <Plot
         data={data}

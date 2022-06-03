@@ -6,21 +6,26 @@ import StrategiesList from "./components/StrategiesList/StrategiesList";
 import SignalsList from "./components/SignalsList/SignalsList";
 import MainGraph from "./components/MainGraph/MainGraph";
 import SignalsGraphs from "./components/SignalsGraphs/SignalsGraphs";
+import {useEffect, useState} from "react";
 
 function App() {
-  return (
+    const [mainGraphStock, setMainGraphStock] = useState('SPY');
+    const [chosenStrategy, setChosenStrategy] = useState('');
+    const [chosenSignals, setChosenSignals] = useState([]);
+
+    return (
     <div className="App">
       <Header />
         <div className="layout">
-            <StrategiesList />
-            <MainGraph />
-            <StocksList />
-            <SignalsList />
-            <SignalsGraphs />
+            <StrategiesList chosenStrategy={chosenStrategy} setChosenStrategy={setChosenStrategy}/>
+            <MainGraph mainGraphStock={mainGraphStock} chosenStrategy={chosenStrategy}/>
+            <StocksList setMainGraphStock={setMainGraphStock} mainGraphStock={mainGraphStock}/>
+            <SignalsList chosenSignals={chosenSignals} setChosenSignals={setChosenSignals}/>
+            <SignalsGraphs chosenSignals={chosenSignals}/>
         </div>
       <Footer />
     </div>
-  );
+    );
 }
 
 export default App;

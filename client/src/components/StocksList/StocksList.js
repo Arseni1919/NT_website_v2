@@ -1,9 +1,9 @@
 import StockButton from "./StockButton";
 import useFetch from "react-fetch-hook";
 import { path } from "../../load_env_variables";
+import {useState} from "react";
 
-function StocksList() {
-    // const [data, setData] = useState(null);
+function StocksList({mainGraphStock, setMainGraphStock}) {
     const { isLoading, data } = useFetch(`${path}/get_stocks_names`);
     // console.log(data)
     return (
@@ -12,7 +12,11 @@ function StocksList() {
         {isLoading ? (<div>Loading...</div>) : (<></>)}
         {data &&
           data.map((title) => (
-            <StockButton title={title} key={title}/>
+            <StockButton title={title}
+                         key={title}
+                         mainGraphStock={mainGraphStock}
+                         setMainGraphStock={setMainGraphStock}
+            />
           ))}
 
     </div>

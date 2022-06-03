@@ -1,13 +1,12 @@
 import SignalGraph from "./SignalGraph";
 
-function SignalsGraphs() {
+function SignalsGraphs({chosenSignals}) {
   return (
     <div className="SignalsGraphs container">
         <h3>SignalsGraphs</h3>
-        <SignalGraph name={'signal 1'}/>
-        <SignalGraph name={'signal 1'}/>
-        <SignalGraph name={'signal 1'}/>
-        <SignalGraph name={'signal 1'}/>
+        {chosenSignals &&
+        chosenSignals.map((item) => (<SignalGraph name={item} key={item}/>))}
+        {/*<SignalGraph name={'item'}/>*/}
     </div>
   );
 }
