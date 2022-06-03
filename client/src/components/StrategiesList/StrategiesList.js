@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 import StrategyItem from "./StrategyItem";
 import useFetch from "react-fetch-hook";
+import { path } from "../../load_env_variables";
 
 function StrategiesList() {
     // const [data, setData] = useState(null);
-    const { isLoading, data } = useFetch("http://localhost:5000/get_strategies_names");
+    const { isLoading, data } = useFetch(`${path}/get_strategies_names`);
 
     return (
     <div className="StrategiesList container">

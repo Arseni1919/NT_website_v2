@@ -1,6 +1,11 @@
 # NT Website - Version 2
 
 
+## Upload Process
+
+1. npm run build
+2. 
+
 ## Credits
 
 - [github | Learning_CSS](https://github.com/Arseni1919/Learning_CSS)

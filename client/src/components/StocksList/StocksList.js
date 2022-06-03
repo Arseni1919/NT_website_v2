@@ -1,10 +1,10 @@
 import StockButton from "./StockButton";
 import useFetch from "react-fetch-hook";
-
+import { path } from "../../load_env_variables";
 
 function StocksList() {
     // const [data, setData] = useState(null);
-    const { isLoading, data } = useFetch("http://localhost:5000/get_stocks_names");
+    const { isLoading, data } = useFetch(`${path}/get_stocks_names`);
     // console.log(data)
     return (
     <div className="StocksList container">
