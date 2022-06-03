@@ -246,3 +246,14 @@ a {
     background-color: black;
 }
 
+.hoverOver:hover {
+    background-color: #e9e9ef;
+    font-weight: bold;
+    color: black;
+}
+
+.hoverOver:active {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}

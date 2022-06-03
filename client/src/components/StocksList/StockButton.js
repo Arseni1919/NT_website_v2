@@ -13,7 +13,7 @@ function StockButton({title, mainGraphStock, setMainGraphStock}) {
     //     return selectedStock.localeCompare(title) === 0
     // }
     return (
-    <div className={`StockButton ${isSameString(mainGraphStock, title) ? 'selectedItem' : 'noSelectedItem'} pointer`} onClick={onClick}>
+    <div className={`StockButton ${isSameString(mainGraphStock, title) ? 'selectedItem' : 'noSelectedItem'} pointer hoverOver`} onClick={onClick}>
         <span className={`stockNameTitle`}>{title}</span>
         <PercentageDiff percentageFromPrevClose={percentageFromPrevClose}/>
     </div>

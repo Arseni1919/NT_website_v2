@@ -19,7 +19,7 @@ export default function SignalItem({title, allSignalsNames, chosenSignals, setCh
     }
 
     return (
-    <div className="SignalItem innerItem pointer alignVerticalCenter" onClick={onClick}>
+    <div className="SignalItem innerItem pointer alignVerticalCenter hoverOver" onClick={onClick}>
         <span className="signalItemCheckbox">
             <i className={`check ${checkedStatus ? 'active' : ''}`}>&nbsp;</i>
         </span>

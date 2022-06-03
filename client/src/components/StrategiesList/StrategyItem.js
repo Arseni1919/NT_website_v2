@@ -13,7 +13,7 @@ export default function StrategyItem({title, chosenStrategy, setChosenStrategy})
     }
 
   return (
-    <div className={`StrategyItem ${isSameString(chosenStrategy, title) ? 'selectedItem' : 'noSelectedItem'} pointer`}
+    <div className={`StrategyItem  ${isSameString(chosenStrategy, title) ? 'selectedItem' : 'noSelectedItem'} pointer hoverOver`}
     onClick={onClick}>
         <p>{title}</p>
         <DecisionTab title={toBuy ? 'sell': 'buy'} />
