@@ -126,8 +126,8 @@ a {
 
 
 .selectedItem {
-    background-color: #72a2c1;
-    color: white;
+    background-color: #e9e9ef;
+    color: black;
 }
 
 .noSelectedItem {
@@ -253,7 +253,5 @@ a {
 }
 
 .hoverOver:active {
-    background-color: black;
-    font-weight: bold;
-    color: white;
+    border: 1px black solid;
 }
