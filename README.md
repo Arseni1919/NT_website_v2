@@ -8,6 +8,7 @@
 3. git commit -m 'upload'   
 4. git push heroku main 
 5. heroku logs --tail 
+6. go to [nt-company.herokuapp.com](https://nt-company.herokuapp.com/)
 
 
 ## Credits
@@ -20,5 +21,6 @@
 - [blog | How to Fetch Data in React: Cheat Sheet + Examples](https://www.freecodecamp.org/news/fetch-data-react/)
 - [npm | react-fetch-hook](https://www.npmjs.com/package/react-fetch-hook)
 - [medium | Create a stock chart in react js](https://medium.com/how-to-react/create-a-stock-chart-in-react-js-677be5f2f356)
+- [medium | How To Build & Deploy a React + Flask App](https://towardsdatascience.com/build-deploy-a-react-flask-app-47a89a5d17d9)
 - [Plotly | DOCS: data, layout](https://plotly.com/javascript/reference/index/)
 - [Plotly | DOCS: config](https://plotly.com/javascript/configuration-options/)
