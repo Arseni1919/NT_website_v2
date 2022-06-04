@@ -11,7 +11,7 @@ import {useEffect, useState} from "react";
 function App() {
     const [mainGraphStock, setMainGraphStock] = useState('SPY');
     const [chosenStrategy, setChosenStrategy] = useState('');
-    const [chosenSignals, setChosenSignals] = useState([]);
+    const [chosenSignals, setChosenSignals] = useState(['signal 1', 'signal 2']);
 
     return (
     <div className="App">

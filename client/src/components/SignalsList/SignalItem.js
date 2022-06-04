@@ -2,7 +2,7 @@ import {useState} from "react";
 import {isSameString} from "../../functions";
 
 export default function SignalItem({title, allSignalsNames, chosenSignals, setChosenSignals}) {
-    const [checkedStatus, setCheckedStatus] = useState(false)
+    const [checkedStatus, setCheckedStatus] = useState(chosenSignals.includes(title))
     // chosenSignals.includes(title)
     const onClick = () => {
         const newStatus = !checkedStatus
