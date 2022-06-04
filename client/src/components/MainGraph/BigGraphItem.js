@@ -35,12 +35,12 @@ export default function BigGraphItem({width, graphData}) {
     let graph_data = [trace];
 
     let layout = {
-        width: width * 0.9,
+        width: width * 0.95,
         margin: {
-        r: 1,
+        r: 0,
         t: 2,
         b: 4,
-        l: 6
+        l: 40
       },
       dragmode: 'zoom',
       showlegend: false,

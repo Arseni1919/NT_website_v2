@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function StocksList({mainGraphStock, setMainGraphStock}) {
     const { isLoading, data } = useFetch(`${path}/get_stocks_names`);
-    // console.log(data)
+
     return (
     <div className="StocksList container">
         <h3>StocksList</h3>
