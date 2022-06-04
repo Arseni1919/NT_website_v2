@@ -41,7 +41,7 @@ export default function MainGraph({mainGraphStock, chosenStrategy}) {
 
     return (
     <div ref={parentRef} className="MainGraph container" id={'myDiv'}>
-        <h3>Main: {graphTitle}{chosenStrategy ? `, Strategy: ${chosenStrategy}`: ``}</h3>
+        <h3>{graphTitle}{chosenStrategy ? `, Strategy: ${chosenStrategy}`: ``}</h3>
 
         <BigGraphItem width={width} graphData={graphData}/>
 
