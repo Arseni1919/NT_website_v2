@@ -6,7 +6,7 @@ import StrategiesList from "./components/StrategiesList/StrategiesList";
 import SignalsList from "./components/SignalsList/SignalsList";
 import MainGraph from "./components/MainGraph/MainGraph";
 import SignalsGraphs from "./components/SignalsGraphs/SignalsGraphs";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 function App() {
     const [mainGraphStock, setMainGraphStock] = useState('SPY');

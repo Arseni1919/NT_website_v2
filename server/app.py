@@ -2,11 +2,18 @@ import time
 from flask_cors import CORS  # comment this on deployment
 from dotenv import load_dotenv
 import os
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
+import pymongo
+from functions import transform_stock_file
+
 load_dotenv()
 
 mode = os.environ.get('MODE')
+mongo_url = os.environ.get('MONGODB_URL')
 
+client = pymongo.MongoClient(mongo_url)
+posts_db = client['nt_data']
+collection = posts_db['stocks']
 
 signals_names_list = [
     'signal 1',
@@ -60,6 +67,26 @@ if mode == 'build':
 def index_func():
     return send_from_directory(app.static_folder, 'index.html')
     # return 'hello'
+
+
+@app.route('/get_stock')
+def get_stock_func():
+    """
+    item: {
+        time: index,
+        stock_name_1: {
+            adj: _, open: _, high: _, low: _, close: _, volume: _}
+        },
+        stock_name_2: { ... },
+        stock_name_3: { ... },
+        stock_name_4: { ... },
+    }
+    """
+    stock_name = request.args['stock']
+    print(f'stock name: {stock_name}')
+    all_files = list(collection.find({}, {'time': 1, stock_name: 1, '_id': 0}))
+    file_to_send = transform_stock_file(all_files, stock_name)
+    return jsonify(file_to_send)
 
 
 @app.route('/get_signals_names')
