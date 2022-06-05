@@ -8,7 +8,7 @@ export default function MainGraph({mainGraphStock, chosenStrategy}) {
     const parentRef = useRef(null);
     const [width, setWidth] = useState(0);
     const [graphTitle, setGraphTitle] = useState(mainGraphStock);
-    const [graphData, setGraphData] = useState({'time': [], 'close': [], 'high': [], 'low': [], 'open': [], 'adj': []});
+    const [graphData, setGraphData] = useState({'time': [], 'close': [], 'high': [], 'low': [], 'open': [], 'adj': [], 'volume': []});
 
     useEffect ( () => {
         if(parentRef.current){

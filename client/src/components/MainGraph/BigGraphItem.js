@@ -31,7 +31,7 @@ export default function BigGraphItem({width, graphData}) {
         xaxis: 'x',
         yaxis: 'y'
     };
-
+    // console.log(graphData)
     let trace2 = {
         x: graphData['time'],
         y: graphData['volume'],
@@ -85,7 +85,7 @@ export default function BigGraphItem({width, graphData}) {
             // title: 'yaxis2 title', #9467bd
             overlaying: 'y',
             // autorange: true,
-            range: [0, Math.max(...graphData['volume']) * 2],
+            range: [0, Math.max(...trace2.y) * 2],
             visible: false,
         }
     };
