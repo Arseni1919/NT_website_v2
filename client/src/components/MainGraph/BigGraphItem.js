@@ -32,46 +32,62 @@ export default function BigGraphItem({width, graphData}) {
         yaxis: 'y'
     };
 
-    let graphsData = [trace];
+    let trace2 = {
+        x: graphData['time'],
+        y: graphData['volume'],
+        type: 'bar',
+        xaxis: 'x',
+        yaxis: 'y2',
+        marker: {
+            color: 'rgb(158,202,225)',
+            opacity: 0.4,
+        }
+    };
+
+    // let graphsData = [trace];
+    let graphsData = [trace, trace2];
 
     let layout = {
         width: width * 0.92,
-        margin: {
-        r: 0,
-        t: 2,
-        b: 4,
-        l: 40
-      },
-      dragmode: 'zoom',
-      showlegend: false,
-      xaxis: {
-        autorange: true,
-        title: 'Date',
-          type: 'date',
-         rangeselector: {
-            x: 0,
-            y: 1.2,
-            xanchor: 'left',
-            font: {size:8},
-            buttons: [{
-                step: 'month',
-                stepmode: 'backward',
-                count: 1,
-                label: '1 month'
-            }, {
-                step: 'month',
-                stepmode: 'backward',
-                count: 6,
-                label: '6 months'
-            }, {
-                step: 'all',
-                label: 'All dates'
-            }]
-          }
-      },
-      yaxis: {
-        autorange: true,
-      }
+        margin: {r: 0, t: 2, b: 4, l: 40},
+        dragmode: 'zoom',
+        showlegend: false,
+        xaxis: {
+            autorange: true,
+            title: 'Date',
+            type: 'date',
+            rangeselector: {
+                x: 0,
+                y: 1.2,
+                xanchor: 'left',
+                font: {size:8},
+                buttons: [{
+                    step: 'minute',
+                    stepmode: 'backward',
+                    count: 30,
+                    label: '30 minutes'
+                }, {
+                    step: 'hour',
+                    stepmode: 'backward',
+                    count: 1,
+                    label: '1 hour'
+                }, {
+                    step: 'all',
+                    label: 'All Dates'
+                }]
+            }
+        },
+        yaxis: {
+            autorange: true,
+            // range: [0, 100000]
+        },
+        yaxis2: {
+            // title: 'yaxis2 title', #9467bd
+            overlaying: 'y',
+            // autorange: true,
+            range: [0, Math.max(...graphData['volume']) * 2],
+            visible: false,
+        }
     };
     return (
     <div className="BigGraphItem ">

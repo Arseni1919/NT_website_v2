@@ -11,7 +11,7 @@ import {useState} from "react";
 function App() {
     const [mainGraphStock, setMainGraphStock] = useState('SPY');
     const [chosenStrategy, setChosenStrategy] = useState('');
-    const [chosenSignals, setChosenSignals] = useState([]);
+    const [chosenSignals, setChosenSignals] = useState(['RSI']);
 
     return (
     <div className="App">

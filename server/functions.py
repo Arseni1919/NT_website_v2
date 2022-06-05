@@ -13,7 +13,7 @@ def transform_stock_file(all_files, stock_name):
         stock_name_4: { ... },
     }
     """
-    return_value = {'time': [], 'close': [], 'high': [], 'low': [], 'open': [], 'adj': []}
+    return_value = {'time': [], 'close': [], 'high': [], 'low': [], 'open': [], 'adj': [], 'volume': []}
     for file_item in all_files:
         for key in return_value:
             if key == 'time':
