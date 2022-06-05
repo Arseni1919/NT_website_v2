@@ -26,10 +26,12 @@ export default function MainGraph({mainGraphStock, chosenStrategy}) {
     });
 
     useEffect(() => {
-        setGraphData(data)
-        setGraphTitle(mainGraphStock)
+        if (!isLoading) {
+            setGraphData(data)
+            setGraphTitle(mainGraphStock)
+        }
         // eslint-disable-next-line
-    }, [data])
+    }, [isLoading, data])
 
 
 
