@@ -87,6 +87,7 @@ a {
 .StrategiesList {
     grid-column: 1 / 3;
     grid-row: 1 ;
+    /*max-width: 220px;*/
 }
 
 
@@ -107,7 +108,7 @@ a {
 
 .StocksList {
     grid-column: 12 / 13;
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
 }
 
 .StockButton {

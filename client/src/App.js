@@ -11,7 +11,7 @@ import {useState} from "react";
 function App() {
     const [mainGraphStock, setMainGraphStock] = useState('SPY');
     const [chosenStrategy, setChosenStrategy] = useState('');
-    const [chosenSignals, setChosenSignals] = useState(['signal 1', 'signal 2']);
+    const [chosenSignals, setChosenSignals] = useState([]);
 
     return (
     <div className="App">
@@ -21,7 +21,7 @@ function App() {
             <MainGraph mainGraphStock={mainGraphStock} chosenStrategy={chosenStrategy}/>
             <StocksList setMainGraphStock={setMainGraphStock} mainGraphStock={mainGraphStock}/>
             <SignalsList chosenSignals={chosenSignals} setChosenSignals={setChosenSignals}/>
-            <SignalsGraphs chosenSignals={chosenSignals}/>
+            <SignalsGraphs chosenSignals={chosenSignals} mainGraphStock={mainGraphStock}/>
         </div>
       <Footer />
     </div>

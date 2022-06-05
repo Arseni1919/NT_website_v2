@@ -1,7 +1,7 @@
 import StockButton from "./StockButton";
 import useFetch from "react-fetch-hook";
 import { path } from "../../load_env_variables";
-import {useState} from "react";
+// import {useState} from "react";
 
 function StocksList({mainGraphStock, setMainGraphStock}) {
     const { isLoading, data } = useFetch(`${path}/get_stocks_names`);
