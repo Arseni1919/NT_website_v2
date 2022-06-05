@@ -32,10 +32,10 @@ export default function BigGraphItem({width, graphData}) {
         yaxis: 'y'
     };
 
-    let graph_data = [trace];
+    let graphsData = [trace];
 
     let layout = {
-        width: width * 0.95,
+        width: width * 0.92,
         margin: {
         r: 0,
         t: 2,
@@ -47,6 +47,7 @@ export default function BigGraphItem({width, graphData}) {
       xaxis: {
         autorange: true,
         title: 'Date',
+          type: 'date',
          rangeselector: {
             x: 0,
             y: 1.2,
@@ -75,7 +76,7 @@ export default function BigGraphItem({width, graphData}) {
     return (
     <div className="BigGraphItem ">
         <Plot
-        data={graph_data}
+        data={graphsData}
         layout={layout}
         useResizeHandler={true}
         // config={config}

@@ -36,12 +36,13 @@ export default function SignalGraph({name}) {
         width: width * 0.9,
         height: 130,
         // title:name,
-        showlegend: true,
+        // showlegend: true,
+        xaxis: {title: name},
         margin: {
             l: 20,
             r: 20,
             t: 20,
-            b: 20
+            b: 30
         },
 
     }
