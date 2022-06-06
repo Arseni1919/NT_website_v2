@@ -24,4 +24,5 @@
 - [medium | How To Build & Deploy a React + Flask App](https://towardsdatascience.com/build-deploy-a-react-flask-app-47a89a5d17d9)
 - [Plotly | DOCS: data, layout](https://plotly.com/javascript/reference/index/)
 - [Plotly | DOCS: config](https://plotly.com/javascript/configuration-options/)
+- [Plotly (github) | plotly-react events](https://github.com/plotly/react-plotly.js/#event-handler-props)
 - [mongodb | Project Fields to Return from Query](https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/)

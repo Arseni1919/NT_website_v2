@@ -1,4 +1,5 @@
 import Plot from "react-plotly.js";
+// import {useRef} from "react";
 
 // x: graphData['time'],
 // close: graphData['close'],
@@ -15,7 +16,7 @@ import Plot from "react-plotly.js";
 
 
 export default function BigGraphItem({width, graphData}) {
-
+    // const graphRef = useRef()
     let trace = {
         x: graphData['time'],
         close: graphData['close'],
@@ -50,7 +51,7 @@ export default function BigGraphItem({width, graphData}) {
     let layout = {
         width: width * 0.92,
         margin: {r: 0, t: 2, b: 4, l: 40},
-        dragmode: 'zoom',
+        // dragmode: 'zoom',
         showlegend: false,
         xaxis: {
             autorange: true,
@@ -71,6 +72,16 @@ export default function BigGraphItem({width, graphData}) {
                     stepmode: 'backward',
                     count: 1,
                     label: '1 hour'
+                },{
+                    step: 'hour',
+                    stepmode: 'backward',
+                    count: 2,
+                    label: '2 hours'
+                }, {
+                    step: 'hour',
+                    stepmode: 'backward',
+                    count: 4,
+                    label: '4 hours'
                 }, {
                     step: 'all',
                     label: 'All Dates'
@@ -89,6 +100,10 @@ export default function BigGraphItem({width, graphData}) {
             visible: false,
         }
     };
+
+    // const onClick = () => {
+    //     alert('You clicked this Plotly chart!');
+    // };
     return (
     <div className="BigGraphItem ">
         <Plot
@@ -97,6 +112,8 @@ export default function BigGraphItem({width, graphData}) {
         useResizeHandler={true}
         // config={config}
         // style={{width: '100%'}}
+        // ref={graphRef}
+        // onRelayout={onClick}
       />
     </div>
     );
